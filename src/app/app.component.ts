@@ -6,14 +6,12 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  grid: number[][] = Array.from(Array(3),
-    () => Array<number>(3).fill(0))
+  grid: number[][] = Array.from(Array(3), () => Array<number>(3).fill(0))
   //没有子标记为0，玩家下的子标记为1，程序下的子标记为2
   canPlay: boolean = true
   count: number = 9
   winner: 'AI' | '玩家'
-  ma: [number, number][] = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2],
-    [2, 0], [2, 1], [2, 2]]
+  ma: [number, number][] = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
 
   //玩家尝试下子
   tryDumpIt(x: number, y: number): void {
